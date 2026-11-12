@@ -14,7 +14,19 @@
 | `Experimental_Report.tex` | 报告源码，章节结构沿用课程模板（网页整体框架 / 主页设计 / 分页面设计 / 网页设计小结 / 课程的收获和建议） |
 | `Experimental_Report.cls` | 课程模板类文件，含 3 处本地编译适配补丁（见下） |
 | `Experimental_Report.bib`、`Experimental_Report.bst` | 课程模板附带的示例文献库与文献样式 |
+| `HUSTBlack.png` | 封面校名图（600 dpi，由课程模板预编译 PDF 裁出） |
 | `images/` | 报告插图：网站框架图、各页面截图、占卜流程截图、GitHub 发布证据 |
+
+## 封面信息
+
+| 字段 | 内容 |
+| --- | --- |
+| 课程名称 | 新生实践课 |
+| 姓名 | 陈泽桐 |
+| 学号 | U202615116 |
+| 专业班级 / 指导教师 | 按要求留空 |
+| 报告日期 | 2026 年 11 月 12 日 |
+
 
 ## 报告结构与网页的对应关系
 
@@ -29,7 +41,7 @@
 ## 重新编译
 
 1. 准备支持 XeLaTeX 的 TeX 环境（TeX Live / MiKTeX / tectonic 均可）；
-2. 从课程模板 `experimental-report_standalone.zip` 中取出 `STZhongsong.ttf` 放到本目录（封面标题字体）；
+2. 从课程模板 `experimental-report_standalone.zip` 中取出 `STZhongsong.ttf` 放到本目录（封面标题字体；其余编译所需文件本目录已齐全）；
 3. 执行 `xelatex Experimental_Report.tex`（本机使用 tectonic 0.15 的 XeTeX 模式编译，命令：
    `tectonic -X compile Experimental_Report.tex`）。
 
