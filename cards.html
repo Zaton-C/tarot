@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>塔罗牌图鉴 · 78 张全牌 · 月影塔罗</title>
+<meta name="description" content="完整 78 张塔罗牌图鉴：22 张大阿卡纳与 56 张小阿卡纳的牌义、关键词与元素属性。">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+</head>
+<body>
+
+<canvas id="starfield"></canvas>
+
+<header class="site-header">
+  <nav class="nav wrap">
+    <a class="brand" href="index.html"><span class="sigil-mark">✦</span>月影塔罗</a>
+    <div class="nav-links">
+      <a href="index.html">主页</a>
+      <a href="basic.html">基础占卜</a>
+      <a href="deep.html">深度占卜</a>
+      <a href="spreads.html">牌阵图鉴</a>
+      <a href="cards.html" class="is-active">塔罗牌图鉴</a>
+      <a href="guide.html">使用指南</a>
+    </div>
+  </nav>
+</header>
+
+<section class="wrap" style="padding-top:46px;text-align:center">
+  <span class="eyebrow">The Deck</span>
+  <h1 style="font-size:clamp(1.8rem,4.4vw,2.8rem);margin:16px 0 10px">塔罗牌图鉴 · 78 张</h1>
+  <p class="muted" style="max-width:760px;margin:0 auto">
+    22 张大阿卡纳是命运的骨架，56 张小阿卡纳是生活的纹理。
+    点击任意一张牌，可以展开它的正位与逆位释义。
+  </p>
+</section>
+
+<section class="wrap" style="padding:36px 0 70px">
+  <div class="card-filters">
+    <button type="button" class="filter-btn is-active" data-filter="all">全部 78 张</button>
+    <button type="button" class="filter-btn" data-filter="major">大阿卡纳 22</button>
+    <button type="button" class="filter-btn" data-filter="权杖">权杖 · 火</button>
+    <button type="button" class="filter-btn" data-filter="圣杯">圣杯 · 水</button>
+    <button type="button" class="filter-btn" data-filter="宝剑">宝剑 · 风</button>
+    <button type="button" class="filter-btn" data-filter="星币">星币 · 土</button>
+  </div>
+  <div class="card-gallery" id="gallery"></div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner wrap">
+    <div class="footer-sigil">☾ ✦ ☽</div>
+    <p>月影塔罗 · 《计算机基础》课程设计作品</p>
+    <div class="footer-links">
+      <a href="index.html">主页</a>
+      <a href="basic.html">基础占卜</a>
+      <a href="deep.html">深度占卜</a>
+      <a href="spreads.html">牌阵图鉴</a>
+      <a href="guide.html">使用指南</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/cards-major.js"></script>
+<script src="js/cards-minor.js"></script>
+<script src="js/spreads.js"></script>
+<script src="js/deck.js"></script>
+<script src="js/starfield.js"></script>
+<script>
+
+(function () {
+  var gallery = document.getElementById('gallery');
+
+  function render(filter) {
+    gallery.innerHTML = '';
+    var all = TAROT_MAJOR.concat(TAROT_MINOR);
+    all.filter(function (card) {
+      if (filter === 'all') return true;
+      if (filter === 'major') return card.type === 'major';
+      return card.suit === filter;
+    }).forEach(function (card) {
+      var meta = Tarot.suitMeta(card);
+      var item = document.createElement('div');
+      item.className = 'gallery-item';
+      item.innerHTML =
+        '<div class="gi-card">' + Tarot.cardFaceSVG(card) + '</div>' +
+        '<h4>' + card.name + '</h4>' +
+        '<div class="gi-meta" style="color:' + meta.color + '">' + meta.theme + '</div>' +
+        '<div class="gi-key">' + card.keywords.join(' · ') + '</div>' +
+        '<div class="gi-meaning"><b class="gold">正位：</b>' + card.upright + '<br><br>' +
+        '<b class="gold">逆位：</b>' + card.reversed + '<br><br>' +
+        '<b class="gold">提示：</b>' + card.advice + '</div>';
+      item.addEventListener('click', function () { item.classList.toggle('is-open'); });
+      gallery.appendChild(item);
+    });
+  }
+
+  var btns = document.querySelectorAll('.filter-btn');
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener('click', function () {
+      for (var j = 0; j < btns.length; j++) btns[j].classList.remove('is-active');
+      this.classList.add('is-active');
+      render(this.getAttribute('data-filter'));
+    });
+  }
+  render('all');
+})();
+</script>
+</body>
+</html>

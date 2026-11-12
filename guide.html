@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>使用指南 · 塔罗知识与占卜说明 · 月影塔罗</title>
+<meta name="description" content="占卜流程指引、牌阵选择建议、塔罗基础知识与本站页面结构说明。">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+</head>
+<body>
+
+<canvas id="starfield"></canvas>
+
+<header class="site-header">
+  <nav class="nav wrap">
+    <a class="brand" href="index.html"><span class="sigil-mark">✦</span>月影塔罗</a>
+    <div class="nav-links">
+      <a href="index.html">主页</a>
+      <a href="basic.html">基础占卜</a>
+      <a href="deep.html">深度占卜</a>
+      <a href="spreads.html">牌阵图鉴</a>
+      <a href="cards.html">塔罗牌图鉴</a>
+      <a href="guide.html" class="is-active">使用指南</a>
+    </div>
+  </nav>
+</header>
+
+<section class="wrap" style="padding-top:46px;text-align:center">
+  <span class="eyebrow">Guide</span>
+  <h1 style="font-size:clamp(1.8rem,4.4vw,2.8rem);margin:16px 0 10px">使用指南</h1>
+  <p class="muted" style="max-width:760px;margin:0 auto">
+    从怎么问问题、怎么选牌阵，到塔罗牌本身的秘密——以及这个网站是怎么被做出来的。
+  </p>
+</section>
+
+<section class="wrap" style="padding:36px 0">
+  <div class="section-head">
+    <span class="eyebrow">How To</span>
+    <h2>一次占卜的完整流程</h2>
+  </div>
+  <div class="info-grid">
+    <div class="info-card">
+      <h3>① 先把问题问对</h3>
+      <p>塔罗擅长回答"现状、趋势与选择"，不擅长回答精确的数字、日期或他人的隐私心思。</p>
+      <ul>
+        <li>把问题聚焦到"现在"与"我"，例如"我在这段关系中的状态如何"。</li>
+        <li>避免问"他会不会爱我"这类你无法控制他人心意的问题。</li>
+        <li>同一个问题连续问三次会削弱牌意，换个角度问更好。</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <h3>② 按问题的复杂度选牌阵</h3>
+      <ul>
+        <li><b>只要一个方向</b>：一张牌展开法（1 张）</li>
+        <li><b>一个二选一决定</b>：是否抉择展开法（1 张）</li>
+        <li><b>看事情的发展</b>：过去现在未来（3 张）</li>
+        <li><b>向内看自己</b>：了解自己展开法（3 张）</li>
+        <li><b>看整件事的结构</b>：解决方案（5 张）／金字塔（7 张）</li>
+        <li><b>看关系与全景</b>：新关系（5 张）／元素五芒星（5 张）／安娜金关系（10 张）／凯尔特十字（10 张）</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <h3>③ 让心静下来再洗牌</h3>
+      <p>洗牌不是玄学步骤，而是把注意力从"急于得到答案"切换到"认真对待这个问题"的过程。</p>
+      <ul>
+        <li>在心中默念你的问题，然后点击"开始洗牌"。</li>
+        <li>牌会正面朝下摊在牌桌上，位置顺序就是牌阵的结构。</li>
+        <li>逐张点击翻开——翻牌的动作由你亲手完成。</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <h3>④ 读懂你的牌</h3>
+      <p>解读由四部分组成：</p>
+      <ul>
+        <li><b>逐张解读</b>：该位置在牌阵中的意义 + 这张牌的牌义。</li>
+        <li><b>能量分析</b>：火/水/风/土 哪种元素占优，它代表当下什么在主导。</li>
+        <li><b>综合结论</b>：从第一张牌到最后一张牌的走向。</li>
+        <li><b>行动建议</b>：三条可以今天就执行的建议。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" style="padding:20px 0">
+  <div class="ornament"><span>☾ ✦ ☽</span></div>
+  <div class="section-head">
+    <span class="eyebrow">Knowledge</span>
+    <h2>塔罗基础知识</h2>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-card">
+      <h3>牌组结构：22 + 56</h3>
+      <p><b class="gold">大阿卡纳 22 张</b>是"主牌"，以人物与情景为原型，讲的是生命旅程的阶段与母题：愚人到世界，构成一个完整的循环。</p>
+      <p><b class="gold">小阿卡纳 56 张</b>是"副牌"，按权杖（火）、圣杯（水）、宝剑（风）、星币（土）四组展开，每组 14 张，讲述日常中的行动、情感、思考与物质。</p>
+      <p>本站的基础占卜只用 22 张大阿卡纳，因为它们回答的是"性质与方向"；深度占卜启用全部 78 张，因为细节与步骤藏在小牌里。</p>
+    </div>
+
+    <div class="info-card">
+      <h3>四种元素</h3>
+      <ul>
+        <li><b class="gold" style="color:#e0603a">火 · 权杖</b>：行动、热情、创造、冲劲。火多时需要的是"开始做"。</li>
+        <li><b class="gold" style="color:#4aa8d8">水 · 圣杯</b>：情感、关系、直觉。水多时需要的是"感受与沟通"。</li>
+        <li><b class="gold" style="color:#9aa6c4">风 · 宝剑</b>：思想、言语、冲突、真相。风多时需要的是"把话说清楚"。</li>
+        <li><b class="gold" style="color:#c9a227">土 · 星币</b>：金钱、身体、工作、现实。土多时需要的是"落实与耐心"。</li>
+      </ul>
+      <p>解读页的"能量分析"会统计你这次抽到的四种元素比例，并指出哪一种在主导。</p>
+    </div>
+
+    <div class="info-card">
+      <h3>正位与逆位</h3>
+      <p>牌抽出来后，约四成概率会以<b>逆位</b>出现（本站设定为 42%）。</p>
+      <p><b>正位</b>表示该能量顺畅地表达；<b>逆位</b>不必然是"坏"，而是该能量受阻、过度或转向内部——比如"力量"逆位不是软弱，而是内在力量尚未被驯服。</p>
+      <p>解读时，逆位会与所在位置的含义结合，而不是简单地判为凶吉。</p>
+    </div>
+
+    <div class="info-card">
+      <h3>关于占卜的边界</h3>
+      <p>塔罗是一套象征系统与自我投射工具，它擅长帮你把模糊的困扰说清楚。</p>
+      <p>它不预测彩票号码，不替代医疗、法律与专业意见，也不负责替别人做决定。</p>
+      <p>本站所有结果由随机牌组与固定牌义生成，仅供自我思考与娱乐参考。</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" style="padding:20px 0">
+  <div class="ornament"><span>✧ ☽ ✧</span></div>
+  <div class="section-head">
+    <span class="eyebrow">Structure</span>
+    <h2>本站页面结构</h2>
+    <p>共 6 个网页，页面之间全部使用<b>相对路径</b>相互跳转，可直接双击 index.html 离线打开。</p>
+  </div>
+
+  <div class="panel" style="padding:0;overflow:hidden">
+    <table style="width:100%;border-collapse:collapse;font-size:.92rem">
+      <thead>
+        <tr style="background:rgba(139,92,246,.16)">
+          <th style="text-align:left;padding:12px 16px;border-bottom:1px solid rgba(180,140,232,.2)">页面</th>
+          <th style="text-align:left;padding:12px 16px;border-bottom:1px solid rgba(180,140,232,.2)">相对路径</th>
+          <th style="text-align:left;padding:12px 16px;border-bottom:1px solid rgba(180,140,232,.2)">内容</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding:11px 16px;border-bottom:1px solid rgba(180,140,232,.12)">主页</td><td style="padding:11px 16px;border-bottom:1px solid rgba(180,140,232,.12)"><code>index.html</code></td><td style="padding:11px 16px;border-bottom:1px solid rgba(180,140,232,.12)">站点入口、两种占卜模式介绍、十种牌阵一览</td></tr>
+        <tr><td style="padding:11px 16px">基础占卜</td><td style="padding:11px 16px"><code>basic.html</code></td><td style="padding:11px 16px">22 张大阿卡纳，4 种牌阵的完整占卜流程</td></tr>
+        <tr><td style="padding:11px 16px;border-bottom:1px solid rgba(180,140,232,.12)">深度占卜</td><td style="padding:11px 16px;border-bottom:1px solid rgba(180,140,232,.12)"><code>deep.html</code></td><td style="padding:11px 16px;border-bottom:1px solid rgba(180,140,232,.12)">完整 78 张，6 种牌阵的完整占卜流程</td></tr>
+        <tr><td style="padding:11px 16px">牌阵图鉴</td><td style="padding:11px 16px"><code>spreads.html</code></td><td style="padding:11px 16px">十种牌阵的位置含义与备选问题</td></tr>
+        <tr><td style="padding:11px 16px;border-bottom:1px solid rgba(180,140,232,.12)">塔罗牌图鉴</td><td style="padding:11px 16px;border-bottom:1px solid rgba(180,140,232,.12)"><code>cards.html</code></td><td style="padding:11px 16px;border-bottom:1px solid rgba(180,140,232,.12)">78 张牌面、正逆位释义与元素属性</td></tr>
+        <tr><td style="padding:11px 16px">使用指南</td><td style="padding:11px 16px"><code>guide.html</code></td><td style="padding:11px 16px">占卜指引、塔罗基础知识、页面结构说明</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="info-grid" style="margin-top:20px">
+    <div class="info-card">
+      <h3>技术实现</h3>
+      <ul>
+        <li>纯静态页面：HTML + CSS + 原生 JavaScript，无框架、无外部依赖，离线可用。</li>
+        <li>全部 78 张卡面由 SVG 程序化绘制（<code>js/deck.js</code>），每张牌的纹章由牌号哈希生成，几何图案互不相同。</li>
+        <li>洗牌使用 <code>crypto.getRandomValues()</code> 实现无偏随机；逆位出现概率设为 42%。</li>
+        <li>牌阵布局使用 CSS Grid 的 <code>grid-area</code> 精确定位，十种牌阵各有专属布局类。</li>
+        <li>翻牌效果使用 CSS 3D 变换（<code>preserve-3d</code> + <code>rotateY</code>），无图片素材。</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <h3>文件结构</h3>
+      <ul>
+        <li><code>index.html</code> · <code>basic.html</code> · <code>deep.html</code></li>
+        <li><code>spreads.html</code> · <code>cards.html</code> · <code>guide.html</code></li>
+        <li><code>css/style.css</code> — 深色神秘学主题与全部牌阵布局</li>
+        <li><code>js/cards-major.js</code> — 22 张大阿卡纳牌义</li>
+        <li><code>js/cards-minor.js</code> — 56 张小阿卡纳牌义</li>
+        <li><code>js/spreads.js</code> — 10 种牌阵与问题库</li>
+        <li><code>js/deck.js</code> — 洗牌、抽牌与 SVG 卡面生成</li>
+        <li><code>js/divination.js</code> — 占卜流程与解读生成</li>
+        <li><code>images/</code> — 自制插画素材</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner wrap">
+    <div class="footer-sigil">☾ ✦ ☽</div>
+    <p>月影塔罗 · 《计算机基础》课程设计作品</p>
+    <p>占卜结果由随机牌组与固定牌义生成，仅供自我思考与娱乐参考</p>
+    <div class="footer-links">
+      <a href="index.html">主页</a>
+      <a href="basic.html">基础占卜</a>
+      <a href="deep.html">深度占卜</a>
+      <a href="spreads.html">牌阵图鉴</a>
+      <a href="cards.html">塔罗牌图鉴</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/starfield.js"></script>
+<script>
+</script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>月影塔罗 · 神秘学塔罗占卜</title>
+<meta name="description" content="月影塔罗：使用 22 张大阿卡纳与完整 78 张塔罗牌进行占卜的互动网站，提供 10 种经典牌阵与专业解读。">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+</head>
+<body>
+
+<canvas id="starfield"></canvas>
+
+<header class="site-header">
+  <nav class="nav wrap">
+    <a class="brand" href="index.html"><span class="sigil-mark">✦</span>月影塔罗</a>
+    <div class="nav-links">
+      <a href="index.html" class="is-active">主页</a>
+      <a href="basic.html">基础占卜</a>
+      <a href="deep.html">深度占卜</a>
+      <a href="spreads.html">牌阵图鉴</a>
+      <a href="cards.html">塔罗牌图鉴</a>
+      <a href="guide.html">使用指南</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="wrap">
+  <span class="eyebrow">Mystical Tarot Divination</span>
+  <h1>聆听牌面深处的<span class="thin">低语</span></h1>
+  <p class="lead">
+    22 张大阿卡纳讲述命运的骨架，56 张小阿卡纳铺陈日常的纹理。
+    在这里，你将亲手洗牌、亲手翻开属于你的那几张牌——答案不在我这里，在你的指尖与你的选择之间。
+  </p>
+  <div class="hero-actions">
+    <a class="btn btn-mystic" href="basic.html">✦ 基础占卜 · 22 张大阿卡纳</a>
+    <a class="btn btn-ghost" href="deep.html">✧ 深度占卜 · 完整 78 张</a>
+  </div>
+  <div class="ornament"><span>☾ ✦ ☽</span></div>
+  </div>
+</section>
+
+<section class="section wrap">
+  <div class="section-head">
+    <span class="eyebrow">Two Paths</span>
+    <h2>两条占卜之路</h2>
+    <p>同一个问题，牌阵不同、深浅不同，你得到的视野也不同。</p>
+  </div>
+
+  <div class="feature-grid">
+    <a class="feature" href="basic.html" style="text-decoration:none;color:inherit">
+      <span class="f-num">01</span>
+      <div class="f-icon">☾</div>
+      <h3>基础占卜 · 仅 22 张大阿卡纳</h3>
+      <p>
+        大阿卡纳是塔罗的主牌，讲的是一个人从懵懂走向圆满的旅程。
+        用它占卜，只用四张牌阵（1 / 1 / 3 / 3 张），回答"这件事的性质与方向"这类宏观问题——
+        快速、直指本质、不纠缠细节。
+      </p>
+      <p style="margin-top:12px"><span class="gold">4 种牌阵 →</span></p>
+    </a>
+
+    <a class="feature" href="deep.html" style="text-decoration:none;color:inherit">
+      <span class="f-num">02</span>
+      <div class="f-icon">✦</div>
+      <h3>深度占卜 · 完整 78 张</h3>
+      <p>
+        小阿卡纳把宏大叙事拆解成具体的处境、人物与日常。
+        用它占卜，可以用六种牌阵（5 / 5 / 5 / 7 / 10 / 10 张）看清时间线、阻力与可执行的步骤——
+        代价是更长的等待，换来更细的答案。
+      </p>
+      <p style="margin-top:12px"><span class="gold">6 种牌阵 →</span></p>
+    </a>
+  </div>
+</section>
+
+<section class="section wrap">
+  <div class="section-head">
+    <span class="eyebrow">Ten Spreads</span>
+    <h2>十种经典牌阵</h2>
+    <p>从一张牌的一瞥，到凯尔特十字的全景。点击查看每种牌阵的位置含义与备选问题。</p>
+  </div>
+
+  <div class="feature-grid" id="homeSpreadGrid"></div>
+
+  <div class="ornament"><span>✧ ☽ ✧</span></div>
+</section>
+
+<section class="section wrap">
+  <div class="section-head">
+    <span class="eyebrow">The Ritual</span>
+    <h2>一次占卜的四个步骤</h2>
+  </div>
+  <div class="feature-grid">
+    <div class="feature">
+      <span class="f-num">01</span><div class="f-icon">❖</div>
+      <h3>选择牌阵</h3>
+      <p>先决定你想问的事有多复杂。问"该不该去"，用一张牌；问"整件事会怎么走"，用十个位置。</p>
+    </div>
+    <div class="feature">
+      <span class="f-num">02</span><div class="f-icon">✎</div>
+      <h3>选定问题</h3>
+      <p>每种牌阵都配好了备选问题，也可以写下你自己的。问题越具体，解读越有用。</p>
+    </div>
+    <div class="feature">
+      <span class="f-num">03</span><div class="f-icon">☽</div>
+      <h3>亲手抽牌</h3>
+      <p>洗牌、屏息、翻开——每翻一张都是一次确认。抽到逆位，意味着这股的能量需要调整方向。</p>
+    </div>
+    <div class="feature">
+      <span class="f-num">04</span><div class="f-icon">✦</div>
+      <h3>阅读解读</h3>
+      <p>逐张牌义 + 能量分布 + 综合结论 + 三条行动建议。牌是倾向，不是判决。</p>
+    </div>
+  </div>
+</section>
+
+<section class="section wrap">
+  <div class="panel" style="display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center">
+    <div>
+      <span class="eyebrow">About</span>
+      <h3 style="margin:12px 0 10px">关于本站</h3>
+      <p class="muted" style="font-size:.95rem">
+        本站是《计算机基础》课程设计的网页作品，主题为塔罗牌占卜。所有页面由本人使用
+        Dreamweaver / VS Code / AI 辅助原创设计编写；全部 78 张牌的卡面图形由 SVG 程序化绘制，
+        未使用任何第三方图片素材或他人页面代码。
+      </p>
+      <p class="muted" style="font-size:.95rem">
+        牌义部分参考了塔罗占卜的通用象征系统（元素、行星与数字对应关系），
+        但全部文字表述均为本项目重新撰写。
+      </p>
+      <div class="hero-actions" style="justify-content:flex-start;margin-top:20px">
+        <a class="btn btn-ghost" href="guide.html">查看使用指南</a>
+        <a class="btn btn-ghost" href="cards.html">浏览 78 张牌</a>
+      </div>
+    </div>
+    <figure style="margin:0">
+      <img src="images/mystic-table.jpg" alt="深色丝绒桌面上的塔罗牌与烛光" style="width:100%;border-radius:14px;border:1px solid rgba(180,140,232,.2);display:block">
+      <figcaption style="color:#7b6d99;font-size:.82rem;margin-top:8px;text-align:center">牌桌一角 · 原创建意插画</figcaption>
+    </figure>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner wrap">
+    <div class="footer-sigil">☾ ✦ ☽</div>
+    <p>月影塔罗 · 《计算机基础》课程设计作品</p>
+    <p>占卜结果由随机牌组与固定牌义生成，仅供自我思考与娱乐参考</p>
+    <div class="footer-links">
+      <a href="basic.html">基础占卜</a>
+      <a href="deep.html">深度占卜</a>
+      <a href="spreads.html">牌阵图鉴</a>
+      <a href="cards.html">塔罗牌图鉴</a>
+      <a href="guide.html">使用指南</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/cards-major.js"></script>
+<script src="js/cards-minor.js"></script>
+<script src="js/spreads.js"></script>
+<script src="js/deck.js"></script>
+<script src="js/starfield.js"></script>
+<script>
+
+/* 主页牌阵一览 */
+(function () {
+  var grid = document.getElementById('homeSpreadGrid');
+  TAROT_SPREADS.forEach(function (s) {
+    var a = document.createElement('a');
+    a.className = 'feature';
+    a.href = 'spreads.html#' + s.id;
+    a.style.textDecoration = 'none';
+    a.style.color = 'inherit';
+    a.innerHTML =
+      '<span class="f-num">' + s.cards + '</span>' +
+      '<div class="f-icon">' + (s.level === 'basic' ? '☾' : '✦') + '</div>' +
+      '<h3>' + s.name + '</h3>' +
+      '<p>' + s.tagline + '</p>' +
+      '<p style="margin-top:10px"><span class="gold">' + (s.level === 'basic' ? '基础占卜' : '深度占卜') + ' · ' + s.cards + ' 张牌</span></p>';
+    grid.appendChild(a);
+  });
+})();
+</script>
+</body>
+</html>

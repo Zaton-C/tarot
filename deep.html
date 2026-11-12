@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>深度占卜 · 完整 78 张 · 月影塔罗</title>
+<meta name="description" content="深度占卜：使用完整 78 张塔罗牌，提供解决方案、新关系、元素五芒星、金字塔、安娜金关系、凯尔特十字六种牌阵。">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+</head>
+<body>
+
+<canvas id="starfield"></canvas>
+
+<header class="site-header">
+  <nav class="nav wrap">
+    <a class="brand" href="index.html"><span class="sigil-mark">✦</span>月影塔罗</a>
+    <div class="nav-links">
+      <a href="index.html">主页</a>
+      <a href="basic.html">基础占卜</a>
+      <a href="deep.html" class="is-active">深度占卜</a>
+      <a href="spreads.html">牌阵图鉴</a>
+      <a href="cards.html">塔罗牌图鉴</a>
+      <a href="guide.html">使用指南</a>
+    </div>
+  </nav>
+</header>
+
+<section class="wrap" style="padding-top:46px;text-align:center">
+  <span class="eyebrow">Deep Divination</span>
+  <h1 style="font-size:clamp(1.8rem,4.4vw,2.8rem);margin:16px 0 10px">深度占卜 · 完整 78 张</h1>
+  <p class="muted" style="max-width:780px;margin:0 auto">
+    小阿卡纳把大阿卡纳的宏大叙事拆解为具体的处境、人物与日常。
+    六种深度牌阵从 5 张到 10 张，能看清时间线、阻力与可执行的步骤——
+    代价是更长的等待，换来更细的答案。
+  </p>
+</section>
+
+<div class="wrap">
+  <div class="step-bar">
+    <span class="step-dot is-current"><i>1</i>选择牌阵</span>
+    <span class="step-dot"><i>2</i>选择问题</span>
+    <span class="step-dot"><i>3</i>洗牌抽牌</span>
+    <span class="step-dot"><i>4</i>阅读解读</span>
+  </div>
+</div>
+
+<section class="wrap" style="padding-bottom:70px">
+
+  <!-- 步骤 1 -->
+  <div class="step-panel is-active" data-step="spread">
+    <div class="section-head">
+      <h2>第一步 · 选择牌阵</h2>
+      <p>牌阵张数越多，看到的层面越细：5 张看结构，7 张看全貌，10 张看全景。</p>
+    </div>
+    <div class="spread-grid" id="spreadGrid"></div>
+  </div>
+
+  <!-- 步骤 2 -->
+  <div class="step-panel" data-step="question">
+    <div class="question-panel">
+      <div class="section-head">
+        <h2 id="questionTitle">第二步 · 选择你想问的问题</h2>
+        <p>每种牌阵都备好了几个问题。选一个，或者写下你自己的。</p>
+      </div>
+      <div class="question-list" id="questionList"></div>
+      <p class="question-note" id="questionNote">提示：深度牌阵适合问"整件事"；若你只想确认一个决定，请回到基础占卜。</p>
+      <div class="hero-actions">
+        <button type="button" class="btn btn-mystic" id="btnConfirmQuestion">确认问题 · 进入洗牌 →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 步骤 3 -->
+  <div class="step-panel" data-step="draw">
+    <div class="section-head">
+      <h2>第三步 · 洗牌与抽牌</h2>
+      <p>请在心里默念你的问题，然后亲手翻开你抽到的每一张牌。</p>
+    </div>
+    <div class="draw-area">
+      <div class="draw-hint" id="drawHint"></div>
+      <p class="progress-line">已翻开 <span id="progress">0 / 1</span></p>
+      <div class="board" id="board"></div>
+      <div class="hero-actions">
+        <button type="button" class="btn btn-mystic" id="btnInterpret" style="display:none">✦ 揭示我的解读 ✦</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 步骤 4 -->
+  <div class="step-panel" data-step="result">
+    <div id="resultBody"></div>
+    <div class="result-actions">
+      <button type="button" class="btn btn-mystic" id="btnRestart">重新开始一次占卜</button>
+      <button type="button" class="btn btn-ghost" id="btnBackToSpread">回到牌阵选择</button>
+      <a class="btn btn-ghost" href="basic.html">试试基础占卜 →</a>
+    </div>
+  </div>
+
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner wrap">
+    <div class="footer-sigil">☾ ✦ ☽</div>
+    <p>月影塔罗 · 《计算机基础》课程设计作品</p>
+    <p>占卜结果由随机牌组与固定牌义生成，仅供自我思考与娱乐参考</p>
+    <div class="footer-links">
+      <a href="index.html">主页</a>
+      <a href="basic.html">基础占卜</a>
+      <a href="spreads.html">牌阵图鉴</a>
+      <a href="cards.html">塔罗牌图鉴</a>
+      <a href="guide.html">使用指南</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/cards-major.js"></script>
+<script src="js/cards-minor.js"></script>
+<script src="js/spreads.js"></script>
+<script src="js/deck.js"></script>
+<script src="js/divination.js"></script>
+<script src="js/starfield.js"></script>
+<script>
+
+Divination.init({ level: 'deep' });
+</script>
+</body>
+</html>
