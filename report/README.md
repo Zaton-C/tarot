@@ -36,7 +36,7 @@
 | 2 主页设计 | `index.html` 的视觉基调与信息结构 |
 | 3 分页面设计 | `basic.html`、`deep.html`、`spreads.html`、`cards.html`、`guide.html` 逐页截图与设计说明；GitHub 提交记录与仓库页截图（"推送形成主页链接"的证据） |
 | 4 网页设计小结 | 开发调试中 7 个真实问题的现象、原因与解决办法；自测方式、原创性说明、性能与体验 |
-| 5 课程的收获和建议 | 按课程专题（计算机基础、LaTeX、Python、Photoshop、Git、Dreamweaver）分述 |
+| 5 课程的收获和建议 | 按课程专题分述：计算机基础知识、Windows 及 Office 系列软件、文档撰写工具 LaTeX、编程工具 Python、图像设计软件 Photoshop、版本管理软件 Git、网页制作 Dreamweaver |
 
 ## 重新编译
 
