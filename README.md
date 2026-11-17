@@ -45,10 +45,13 @@ tarot/
 ## Git 版本管理与发布
 
 ```
-71b49a8  实验报告：封面个人信息改为陈泽桐 / U202615116（班级与指导教师留空）
-37813cc  补充证据：GitHub 提交记录与仓库页截图（考察项 8：推送形成主页链接）
-4e09397  实验报告：按课程 LaTeX 模板生成实验报告并加入仓库，站点新增报告入口
 6dd5496  月影塔罗：塔罗牌占卜网站（计算机基础课程设计）
+4e09397  实验报告：按课程 LaTeX 模板生成实验报告并加入仓库，站点新增报告入口
+37813cc  补充证据：GitHub 提交记录与仓库页截图（考察项 8：推送形成主页链接）
+16da0f7  补充仓库根 README：站点简介、主页与报告入口、结构与发布流程
+c8b4a66  实验报告：补充「Windows 及 Office 系列软件」专题小节
+476afda  实验报告：封面补全专业班级 cs2607 与指导教师 范晔斌
+48740c0  实验报告：第 5 章保持平台要求的 6 个专题
 ```
 
 发布链路：本地源码 → `git init / add / commit / push` → GitHub 仓库 `Zaton-C/tarot`（public, main）→
@@ -56,10 +59,12 @@ GitHub Pages（发布源 main 分支根目录）→ <https://zaton-c.github.io/t
 
 ## 重新编译实验报告
 
-报告使用课程提供的 LaTeX 模板 `Experimental_Report.cls` 编译（A4 20 页，含目录与可点击链接）：
+报告使用课程提供的 LaTeX 模板 `Experimental_Report.cls` 编译（A4 21 页，含目录与可点击链接）：
 
 1. 准备支持 XeLaTeX 的 TeX 环境（TeX Live / MiKTeX / tectonic 均可）；
 2. 从课程模板 `experimental-report_standalone.zip` 中取出 `STZhongsong.ttf` 放到 `report/` 目录；
-3. 在 `report/` 下执行 `xelatex Experimental_Report.tex`（本机使用 `tectonic -X compile`）。
+3. 在 `report/` 下执行 `xelatex Experimental_Report.tex`（本机使用 `tectonic -X compile`）；
+4. 执行 `python report/inject_to_unicode.py <原PDF> <输出PDF>`，为中文 CID 字体补写 `/ToUnicode` 映射，
+   使任意 PDF 阅读器与文本提取工具都能逐字读出正文汉字（原理见 `report/README.md`）。
 
 模板适配补丁与文件清单见 [`report/README.md`](report/README.md)。
